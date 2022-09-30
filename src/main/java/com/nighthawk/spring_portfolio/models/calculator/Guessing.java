@@ -22,10 +22,10 @@ public class Guessing {
         
          if (c != b) {
             if (c > b) {
-                return (c + " was not the number" + "\nlower\n");
+                return (c + " was not the number," + "\nlower\n");
             }
             if (c < b) {
-                return ( c + " was not the number" + "\nhigher\n");
+                return ( c + " was not the number," + "\nhigher\n");
             }
                 
         }
