@@ -1,15 +1,20 @@
 package com.nighthawk.spring_portfolio.models.calculator;
 
+import net.bytebuddy.asm.Advice.Return;
 
 public class Guessing {
    
-    static int b;
-    public static void randomNumber() {
+    static int b = randomNumber();
+    public static int randomNumber() {
         
         double a = (1 + Math.random() * 100);
-        b = ((int) Math.floor(a));
+        return ((int) Math.floor(a));
     }
    
+    public static void newNumber(){
+        b = randomNumber();
+    }
+
     public static String guessing(String guess) {
        
         

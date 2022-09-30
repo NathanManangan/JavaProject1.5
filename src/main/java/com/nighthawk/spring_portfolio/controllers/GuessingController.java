@@ -6,6 +6,7 @@ package com.nighthawk.spring_portfolio.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.nighthawk.spring_portfolio.models.calculator.*;
@@ -30,6 +31,12 @@ public class GuessingController {
         // load HTML VIEW (greet.html)
         return "guessing";
 
+    }
+ 
+    @PostMapping("/new-number")
+    public String newNumber() {
+        Guessing.newNumber();
+        return "guessing";
     }
 
 }
