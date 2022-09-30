@@ -11,11 +11,11 @@
 <th:block layout:fragment="body" th:remove="tag">
   <!-- Start of body content specific to page -->
   <div class="px-4 py-5 my-5">
-    <h3 class="display-5 fw-bold">Type your guess please?</h3>
+    <h3 class="display-5 fw-bold">Type your guess (number 1-100)</h3>
 
     <form action="/guessing" method="GET" id="guessingForm">
       <div>
-        <label for="guessingField">Put your guess here</label>
+        <label for="guessingField">Your guess:</label>
         <input name="name" id="guessingField">
         <button>Check your guess</button>
         <p th:text="${name}"></p>
