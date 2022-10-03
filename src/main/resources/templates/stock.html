@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/base}" lang="en">
+
+<head>
+  <title>Greet</title>
+</head>
+
+<body>
+<th:block layout:fragment="body" th:remove="tag">
+  <!-- Start of body content specific to page -->
+  <div class="px-4 py-5 my-5">
+    <h3 class="display-5 fw-bold">Type a Ticker Symbol</h3>
+
+    <form action="/stock" method="GET" id="stockForm">
+      <div>
+        <label for="stockField">Ticker Symbol: </label>
+        <input name="name" id="stockField">
+        <button>Submit!</button>
+        <p th:text="${result}"></p>
+      </div>
+    </form>
+  </div>
+  <!-- End of body content specific to page -->
+</th:block>
+</body>
+
+</html>
